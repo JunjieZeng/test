@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html{
+    height: 100%;
+}
+.jumparea{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.jumparea ul{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    top:0px;
+
+}
+.jumparea ul li{
+    height: 10%;
+    width: 100%;
+    list-style: none;
+    position: absolute;
+}
+.jumparea ul :nth-child(1){
+    top: 0;
+    background-position: 0 0 ;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:0s, 2.7s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(2){
+    top: 10%;
+    background-position: 0 12% ;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.1s, 2.6s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(3){
+    top: 20%;
+    background-position: 0 23% ;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.2s, 2.5s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(4){
+    top: 30%;
+    background-position:0  34% ;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.3s, 2.4s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(5){
+    top: 40%;
+    background-position: 0  45%;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.4s, 2.3s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(6){
+    top: 50%;
+    background-position: 0  56%;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.5s, 2.2s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(7){
+    top: 60%;
+    background-position:0  67% ;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.6s, 2.1s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(8){
+    top: 70%;
+    background-position:0  78% ;
+    transform: rotateX(90deg);
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.7s, 2s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(9){
+    top: 80%;
+    background-position: 0  89%;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.8s, 1.9s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+.jumparea ul :nth-child(10){
+    top: 90%;
+    background-position:0  100% ;
+    animation-name:lirotate, lirotate2;
+    animation-duration:.8s, .8s;
+    animation-delay:.9s, 1.8s;
+    animation-iteration-count:1, 1;
+    animation-fill-mode:forwards, forwards;
+}
+@keyframes lirotate {
+    0%{transform: rotateX(90deg);}
+    100%{transform: rotateX(0deg);}
+}
+@-moz-keyframes lirotate {
+    0%{transform: rotateX(90deg);}
+    100%{transform: rotateX(0deg);}
+}
+@keyframes lirotate2 {
+    0%{transform: rotateX(0deg);}
+    100%{transform: rotateX(90deg);}
+}
+@-moz-keyframes lirotate2 {
+    0%{transform: rotateX(0deg);}
+    100%{transform: rotateX(90deg);}
+}
+.jumparea ul li{
+    background-image: url("../images/background.jpg");
+     background-size:100% 1000%;
+     transform: rotateX(90deg);
+     animation-fill-mode: forwards;
+ }
