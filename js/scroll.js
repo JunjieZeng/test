@@ -11,6 +11,7 @@ function dragmove(){
 			this.oy=null;
 			this.dox=null;
 			this.doy=null;
+			
 			this.mx=null;
 			this.my=null;
 			this.pl=null;
