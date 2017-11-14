@@ -42,7 +42,7 @@ function deviceMotionHandler(eventData) {
     window.onload=function(){
         var demo=document.getElementById("l");
         var demo2=document.getElementById("l2");
-        var demo1=document.getElementById("broadcastContent_409134");
+        var demo1=document.getElementById("l1");
         demo2.innerHTML=demo1.innerHTML;
         function Marquee(){
             if(demo.scrollTop>=demo1.offsetHeight){
