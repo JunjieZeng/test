@@ -124,14 +124,17 @@ html,body{
 
 
 .bg-name_list_bg{
-    width: 635px; height: 83px;
-    background: url('../images/sprite.png') -728px -445px;
+    width: 633px;
+    height: 74px;
+    background: url(../images/sprite.png) -729px -449px;
     background-size: 1433px 868px;
-	margin: 0 auto;
-	font-size: 30px;
-	text-indent: 65px;
-	line-height: 83px;
-	color: #ffe669;
+    margin: 0 auto;
+    font-size: 30px;
+    text-indent: 65px;
+    line-height: 83px;
+    color: #ffe669;
+    border-radius: 28px;
+    background-color: #D81526;
 }
 .bg-name_list_bg span{
 	font-size: 28px;
@@ -189,4 +192,21 @@ html,body{
 	margin-top: 10px;
 	overflow: hidden;
 	margin-right: 125px;
+}
+
+@media screen and (min-device-aspect-ratio:375/570){ 
+	.chance {
+	    text-align: center;
+	    font-size: 28px;
+	    color: #320004;
+	    margin-top: 115px;
+	}
+}
+@media screen and (min-device-aspect-ratio:375/540){ 
+	.chance {
+	    text-align: center;
+	    font-size: 28px;
+	    color: #320004;
+	    margin-top: 95px;
+	}
 }
