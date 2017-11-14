@@ -4,15 +4,15 @@ var index = {
     		$(this).parent().hide();
     		$(".dia").hide();
     	})
-    	$(".bg-shake_btn_img").one("webkitAnimationEnd",function(){
-    		$(this).removeClass("swing");
-	    	$(".bg-shake_btn_img").on("webkitAnimationEnd",function(){
-	    		$(this).removeClass("swing");
+    	$(".bag").one("webkitAnimationEnd",function(){
+    		$(".bag").removeClass("swing");
+	    	$(".bag").on("webkitAnimationEnd",function(){
+	    		$(".bag").removeClass("swing");
 	    		$('.dia-thanks').show();$('.dia').show();
 	    	})
     	})
     	$(".bg-shake_btn_img").on("click",function(){
-    		$(this).addClass("swing")
+    		$(".bag").addClass("swing")
     	})
 		if (window.DeviceMotionEvent) { 
                  window.addEventListener('devicemotion',deviceMotionHandler, false);  
@@ -30,7 +30,7 @@ function deviceMotionHandler(eventData) {
         y = acceleration.y;
         z = acceleration.z;
         if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed) {
-			$(".bg-shake_btn_img").addClass("swing")
+			$(".bag").addClass("swing")
         }
         lastX = x;
         lastY = y;
