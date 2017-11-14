@@ -5,6 +5,7 @@ var index = {
     		$(".dia").hide();
     	})
     	$(".bag").one("webkitAnimationEnd",function(){
+			
     		$(".bag").removeClass("swing");
 	    	$(".bag").on("webkitAnimationEnd",function(){
 	    		$(".bag").removeClass("swing");
@@ -12,12 +13,15 @@ var index = {
 	    	})
     	})
     	$(".bg-shake_btn_img").on("click",function(){
-    		$(".bag").addClass("swing")
+    		$(".bag").addClass("swing");
+    		index.audio.currentTime = 0;
+			index.audio.play();
     	})
 		if (window.DeviceMotionEvent) { 
                  window.addEventListener('devicemotion',deviceMotionHandler, false);  
         }
-    }
+    },
+	audio:document.getElementById("shakeMusic")
 };
 
 
@@ -31,6 +35,8 @@ function deviceMotionHandler(eventData) {
         z = acceleration.z;
         if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed) {
 			$(".bag").addClass("swing")
+    		index.audio.currentTime = 0;
+			index.audio.play();
         }
         lastX = x;
         lastY = y;
@@ -60,3 +66,19 @@ function deviceMotionHandler(eventData) {
 
 
 index.init();
+
+// var audio = document.getElementById("bgMusic");
+ 
+// //播放(继续播放)
+// audio.play();
+ 
+// //暂停
+// audio.pause();
+ 
+// //停止
+// audio.pause();
+// audio.currentTime = 0;
+ 
+// //重新播放
+// audio.currentTime = 0;
+// audio.play();
