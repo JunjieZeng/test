@@ -136,7 +136,7 @@ html,body{
 .bg-name_list_bg span{
 	font-size: 28px;
 	color: #fffbbf;
-	padding-left: 65px;
+	padding-left: 35px;
 	line-height: 83px;
 }
 
@@ -179,4 +179,14 @@ html,body{
 	background-color: rgba(0,0,0,0.5);
 	top: 0;
 	left: 0;
+}
+
+.name-list-box{
+	display: inline-block;
+	width: 300px;
+	float: right;
+	height: 60px;
+	margin-top: 10px;
+	overflow: hidden;
+	margin-right: 125px;
 }
