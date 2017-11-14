@@ -71,4 +71,7 @@ document.addEventListener("WeixinJSBridgeReady", function () {
     var audio = new Audio();
     audio.src = "shake.mp3"
     audio.play();
+    setTimeout(function(){
+    	audio.pause();
+    })
 }, false);
