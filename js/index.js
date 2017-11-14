@@ -27,7 +27,6 @@ var index = {
                 y = acceleration.y;
                 z = acceleration.z;
                 if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed) {
-                	alert("咬")
     				$(".bg-shake_btn_img").addClass("swing")
                 }
                 lastX = x;
