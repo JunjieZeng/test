@@ -15,12 +15,8 @@ var index = {
     		$(this).addClass("swing")
     	})
 		if (window.DeviceMotionEvent) { 
-			alert("asd")
-		                 window.addEventListener('devicemotion',deviceMotionHandler, false);  
-		        } 
-		        else{
-		        	alert("sb")
-		        }
+                 window.addEventListener('devicemotion',deviceMotionHandler, false);  
+        }
     }
 };
         var speed = 30;//speed
@@ -31,8 +27,7 @@ var index = {
                 y = acceleration.y;
                 z = acceleration.z;
                 if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed || Math.abs(z-lastZ) > speed) {
-                    //简单的摇一摇触发代码
-                    alert(1);
+    		$(this).addClass("swing")
                 }
                 lastX = x;
                 lastY = y;
