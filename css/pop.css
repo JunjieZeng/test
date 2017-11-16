@@ -39,7 +39,7 @@
     width: 100%;
     line-height: 2.70rem;}
 .jp-dialog .jp-dialog-box p em{display:block;color:#df0501; font-size:.32rem; margin-top:.02rem; font-weight:bold;}
-.jp-dialog .jp-dialog-box a.btn-confirm{display:inline-block; width:2.46rem; height:.63rem; line-height:.58rem; background:url(../images/dzp_btn_bg.png) center center no-repeat;background-size:100% 100%; color:#d60000; font-size:.34rem; font-weight:bold; text-shadow:1px 1px 0 #feec65; position:absolute; bottom:-.9rem; left:50%; margin-left:-1.23rem; }
+.jp-dialog .jp-dialog-box a.btn-confirm{display:inline-block; width:2.46rem; height:.63rem; line-height:.58rem; background:url(../images/dzp_btn_bg.png) center center no-repeat;background-size:100% 100%; color:#d60000; font-size:.34rem; font-weight:bold; text-shadow:1px 1px 0 #feec65; position:absolute;  margin-left:-1.23rem; }
 .jp-dialog .jp-dialog-box .zp{text-align:center;}
 .jp-dialog .jp-dialog-box .zp img{ width:2.56rem; height:1.56rem;}
 
@@ -194,7 +194,7 @@
     margin: 0 auto;
     margin-top: .65rem;
 }
-.bg-dia_close_icon {
+.jp-dialog .jp-dialog-box a.bg-dia_close_icon {
     width: .64rem;
     height: .64rem;
     background: url(../images/sprite.png) -12.76rem -6.69rem;
