@@ -1,55 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta name="robots" content="all"/>
-    <meta name="Copyright" content="Tencent"/>
-    <meta name="author" content="Tencent-CP"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport" id="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <title></title>
-    <script>
-        !function(){function a(){var dw=750;var viewport=document.getElementById('viewport');viewport.setAttribute('content', 'width='+dw+', user-scalable=no')}var b=null;window.addEventListener('resize',function(){clearTimeout(b);b=setTimeout(a, 600)},!1);a()}(window);
-    </script>
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/index.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no"/>
+<title>摇一摇</title>
+<link type="text/css" rel="stylesheet" href="css/base.css">
+<link type="text/css" rel="stylesheet" href="css/pop.css">
+<link type="text/css" rel="stylesheet" href="css/yyy.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/reset_font.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </head>
-<body>
 
-<div class="g-wrap">
-    <!-- 背景 -->
-    <img src="images/bg1.jpg" alt="" class="bg">
-    <!-- 福袋 -->
-    <img src="images/bag.png" alt="" class="bag  animated swing">
+<body>
+<div class="img"><img src="images/bg1.jpg" alt=""></div>
+<div class="yyy-main">
     <!-- 活动规则 -->
-    <a href="javascript:$('.dia-rule').show();$('.dia').show();" class="bg-rule_btn_img">活动规则</a>
-    <!-- 摇一摇按钮 -->
-    <a href="javascript:;" class="bg-shake_btn_img"></a>
-    <!-- 几次机会 -->
-    <p class="chance">你还有<span>3</span>次机会</p>
-    <!-- 获奖名单 -->
-    <div class="bg-name_list_bg">
-        获奖名单:
-        <div class="name-list-box" id="l">
-                    <ul class="player-list" id="l1">
-                       <span>15033066547</span>
-                       <span>15033066541237</span>
-                       <span>15033066547</span>
-                       <span>150330665321347</span>
-                       <span>150330665247</span>
-                       <span>1503306652232147</span>
-                       <span>150330665417</span>
-                    </ul>
-                    <ul class="player-list" id="l2">
-                    </ul>
-                </div>
+    <a href="javascript:;" onClick="showpop('hdsm-dialog','dialog-bg')" class="bg-rule_btn_img">活动规则</a>
+	<div class="wrap">
+	<!-- 	<div class="title"><img src="images/index_01.png" alt=""></div> -->
+		<!-- <div class="cjrs">已有 <i>16356</i> 人参加</div> -->
+		<div class="yyy " id="hand">
+			<a href="javascript:;" class="bg-shake_btn_img"></a>
+			<img src="images/bag.png" alt="摇一摇" />
+		</div>
+		<div class="sycs">
+			<ul><span>你还有<i><em class="playnum"></em>次</i>机会</span></ul>
+		</div>
+	</div>
+	<div class="zjmd">
+		<em>中奖名单：</em>
+		<ul>
+			<li>志斌   137****6123   10M流量</li>
+			<li>张三   137****6123   10M流量</li>
+			<li>李四   137****6123   10M流量</li>
+		</ul>
+	</div>
+<!-- 	<div class="btn"><a href="javascript:void(0)" onClick="showpop('hdsm-dialog','dialog-bg')" class="btn-hdsm">活动说明</a><a href="javascript:void(0)" onClick="showpop('share-dialog','dialog-bg')" class="btn-ljfx">立即分享</a></div> -->
+	
+</div>
+
+<!--背景音乐s-->
+<div class="audio_btn"></div>
+<audio id="mp3Btn"  preload="auto">
+	<source src="1.mp3"  type="audio/mpeg" />
+</audio>
+<!--背景音乐e-->
+<!--手机输入框弹出窗s-->
+<div id="tel-dialog" class="dialog" style="margin-top:-1.7rem;display:none;">
+    <div class="dialog-box">
+    	<div class="dialog-title"></div>
+		<ul class="wcjcs-area" style="padding-bottom:.34rem">
+			<div class="input-2"><input type="text" name="" value="" placeholder="请输入手机号码参与摇一摇"></div>
+		</ul>
+		<div class="btn-orange"><a href="javascript:void(0)" onClick="closepop('tel-dialog','dialog-bg')">确定</a></div>
     </div>
 </div>
-<!-- 弹窗 -->
-<!-- 最外层遮罩层 -->
+<!--手机输入框弹出窗e-->
+<!--活动说明弹出窗s-->
+<div id="hdsm-dialog" class="dialog dialog-none" style="margin-top:-2.8rem;">
+    <div class="dialog-box bg-dia_bg2 "><a href="javascript:void(0)" onClick="closepop('hdsm-dialog','dialog-bg')" class="btn-close bg-dia_close_icon">关闭弹窗</a>
+		<h1 class="bg-dia_title3">活动说明</h1>
+		<ul class="hdgz-area dia-rule">
+			<li><em>1、</em><p>活动期间，分享活动页面到朋友圈，即可获得1次抽奖机会，重复分享，不重复送抽奖机会；</p></li>
+			<li><em>2、</em><p>活动期间，每分享此活动页面给一个朋友，只要朋友查看，即可获得1次抽奖机会，分享越多，抽奖机会越多，重复分享给同一个好友，不重复送抽奖机会；</p></li>
+			<li><em>3、</em><p>活动期间取消关注再重新关注，将不重复赠送抽奖机会；</p></li>
+		</ul>
+    </div>
+</div>
+<!--活动说明弹出窗e-->
+<!--活动结束弹出窗s-->
+<div id="js-dialog" class="dialog dialog-none" style="margin-top:-1.7rem;">
+    <div class="dialog-box">
+		<h1>友情提示<a href="javascript:void(0)" onClick="closepop('js-dialog','dialog-bg')" class="btn-close">关闭弹窗</a></h1>
+		<ul class="wcjcs-area">
+			很遗憾，该活动流量已送完，<br/>感谢您的参与！
+		</ul>
+    </div>
+</div>
+<!--活动结束弹出窗e-->
+<!--暂无次数弹出窗s-->
+<div id="hdjs-dialog" class="dialog dialog-none" style="margin-top:-1.7rem;">
+    <div class="dialog-box">
+		<h1>友情提示<a href="javascript:void(0)" onClick="closepop('hdjs-dialog','dialog-bg')" class="btn-close">关闭弹窗</a></h1>
+		<ul class="wcjcs-area">
+			暂无摇一摇次数！
+		</ul>
+    </div>
+</div>
+<!--暂无次数弹出窗e-->
+<!--活动弹出窗s-->
+<div id="hd-dialog" class="jp-dialog dialog-none">
+	<div class="jp-dialog-box bg-dia_bg1">
+		<div class="bg-dia_title2"></div>
+		<!-- <div class="zp"><img src="images/jp_01.jpg" alt=""></div> -->
+		<p>获得100M流量！</p>
+        <a href="javascript:;" onClick="closepop('hd-dialog','dialog-bg')" class="bg-dia_close_icon"></a>
+		<!-- <a href="javascript:void(0)" onClick="closepop('hd-dialog','dialog-bg')" class="btn-confirm">确 认</a> -->
+	</div>
+</div>
+<!--活动弹出窗e-->
+<!--分享好友弹出窗s-->
+<div id="share-dialog" class="share-dialog dialog-none">
+	<div class="txt"></div>
+	<a href="javascript:void(0)" onClick="closepop('share-dialog','dialog-bg')" class="share-btn-close">关闭</a></div>
+<!--分享好友弹出窗e-->
+<div id="dialog-bg" class="dialog-bg dialog-none"></div> 
+
+<!-- 活动弹出窗 -->
 <div class="dia" style="display:none;">
     <!-- 未中奖 -->
     <div class="dia-thanks bg-dia_bg1" style="display:none;">
@@ -57,26 +116,100 @@
         <p>很抱歉，请再接再厉！</p>
         <a href="javascript:;" class="bg-dia_close_icon"></a>
     </div>
-    <!-- 中奖 -->
-    <div class="dia-congratulation bg-dia_bg1" style="display:none;">
-        <div class="bg-dia_title2"></div>
-        <p>获得100M流量！</p>
-        <a href="javascript:;" class="bg-dia_close_icon"></a>
-    </div>
-    <!-- 活动规则 -->
-    <div class="dia-rule bg-dia_bg2" style="display:none;">
-        <div class="bg-dia_title3"></div>
-        <p>活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则</p>
-        <a href="javascript:;" class="bg-dia_close_icon"></a>
-    </div>
 </div>
 
-<audio id="shakeMusic">
-    <source = src="shake.mp3" type="audio/mp3">
-</audio>
 
-<script src="js/zepto.min.js"></script>
-<script src="js/index.js"></script>
+<script>
+	var f=1; 
+	var playnum = 2; //初始次数，由后台传入
+	var is_on = true;
+    var SHAKE_THRESHOLD = 800;
+    var last_update = 0;
+    var x = y = z = last_x = last_y = last_z = 0;
+	var audio = document.getElementById('mp3Btn');
+	$(function() {
+		$('.playnum').html(playnum);
+	});
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+    } else {
+        alert('本设备不支持devicemotion事件');
+    }
+    function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+        var curTime = new Date().getTime();
+        if ((curTime - last_update) > 100) {
+            var diffTime = curTime - last_update;
+            last_update = curTime;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+            var status = document.getElementById("status");
+            if (speed > SHAKE_THRESHOLD) {
+				if(f==1){ 
+					if(playnum <= 0) { 
+						$('#dialog-bg').show();
+						$('#hdjs-dialog').show();
+						f=0;
+					} else {
+					playnum = playnum - 1; //执行转盘了则次数减1
+					if(playnum <= 0) {
+						playnum = 0;
+					}
+					$('.playnum').html(playnum);
+					doResult(); 
+					f=0; 
+					}
+				} 
+            }
+            last_x = x;
+            last_y = y;
+            last_z = z;	
+        }
+    }
 
+    function doResult() {
+		autoPlayAudio1();
+        document.getElementById("hand").className = "yyy hand-animate";
+        setTimeout(function(){
+            document.getElementById("hand").className = "yyy";
+        }, 1000);
+		 setTimeout(function(){
+			$('#dialog-bg').show();
+			$('#hd-dialog').show();
+        }, 1200);
+    }
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+function autoPlayAudio1() {
+	wx.config({
+		debug: false,
+		appId: '',
+		timestamp: 1,
+		nonceStr: '',
+		signature: '',
+		jsApiList: []
+	});
+	wx.ready(function() {
+		document.getElementById('mp3Btn').play();
+	});
+}
+
+setInterval('autoScroll(".zjmd")', 3000);
+function autoScroll(obj) {
+    $(obj).find("ul").animate({
+        marginTop: "-.64rem"
+    },
+    500,
+    function() {
+        $(this).css({
+            marginTop: "0px"
+        }).find("li:first").appendTo(this)
+    })
+}
+</script>
+<script type="text/javascript" src="js/touch.js"></script>
 </body>
 </html>

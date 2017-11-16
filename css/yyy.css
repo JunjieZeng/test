@@ -1,0 +1,95 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.img{position:fixed;width:100%; height:100%; z-index:-1;}
+.img img{position:fixed; height:100%; width:100%}
+
+.yyy-main .title{padding:8% 16% 0;}
+.yyy-main .con ul{padding:.26rem .28rem .4rem; line-height:.39rem; color:#000;}
+.yyy-main .con ul li i{ float:left;}
+.yyy-main .con ul li p{ overflow:hidden}
+.yyy-main .sycs{text-align:center; position:relative;     margin: 0 0 -0.2rem;}
+.yyy-main .sycs ul{font-size:.32rem; color:#ffbf01}
+.yyy-main .sycs span{ padding:.1rem .3rem; display:inline-block;    color: #320004;}
+.yyy-main .sycs span i{    color: #320004;  padding:0 .06rem;}
+
+
+.yyy-main .btn{text-align:center; font-size:0; margin-bottom:.32rem; }
+.yyy-main .btn a.btn-hdsm{display:inline-block; width:2.67rem; height:.63rem; background:url(../images/dzp_btn_hdgz.png) center center no-repeat;background-size:100% 100%; }
+.yyy-main .btn a.btn-ljfx{display:inline-block; width:3.3rem; height:.63rem; background:url(../images/dzp_btn_ljfx.png) center center no-repeat;background-size:100% 100%; margin-left:.5rem; }
+.yyy-main .zjmd{
+    width: 6.33rem;
+    height: .74rem;
+    background: url(../images/sprite.png) -7.29rem -4.49rem;
+    background-size: 14.33rem 8.68rem;
+    margin: 0.3rem auto 0;
+    font-size: .30rem;
+    text-indent: .65rem;
+    line-height: .83rem;
+    color: #ffe669;
+    border-radius: .28rem;
+    background-color: #D81526;
+    position: relative;
+        overflow: hidden;
+        padding-left: 1.3rem;
+}
+.yyy-main .zjmd em{position:absolute; left:-0.3rem; top:0; line-height:.68rem;     color: #ffe669;}
+.yyy-main .zjmd li{line-height:.68rem;}
+.zjmd li{color: #fff;}
+.hdsj{text-align:center; margin-top:.4rem;}
+.hdsj span{font-size:.26rem; padding:.12rem .3rem .15rem; border-radius:.3rem;background:url(../images/icon_time.png) no-repeat .24rem center #cd393c;background-size:.32rem .32rem; padding-left:.7rem}
+.hdsj span i{color:#ffbf01}
+.cjrs{text-align:center; margin:.2rem 0 .18rem; font-size:.32rem; color:#ffe5aa}
+.cjrs i{color:#ffff00}
+.cjjh{text-align:center; margin:.34rem 0 .5rem; font-size:.3rem; font-weight:bold}
+.cjjh i{color:#ffff00; font-size:.34rem}
+
+
+.hand-animate{-webkit-animation: hand_move infinite 1s;-moz-animation: hand_move infinite 1s;animation: hand_move infinite 1s;}
+ @-webkit-keyframes hand_move {
+        0% {
+            -webkit-transform: rotate(0);
+               -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                 -o-transform: rotate(0);
+                    transform: rotate(0); }
+        50% {
+            -webkit-transform: rotate(-35deg);
+               -moz-transform: rotate(-35deg);
+                -ms-transform: rotate(-35deg);
+                 -o-transform: rotate(-35deg);
+                    transform: rotate(-35deg); }
+        100% {
+            -webkit-transform: rotate(0);
+               -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                 -o-transform: rotate(0);
+                    transform: rotate(0); }
+    }
+	 @-moz-keyframes hand_move {
+        0% {
+            -webkit-transform: rotate(0);
+               -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                 -o-transform: rotate(0);
+                    transform: rotate(0); }
+        50% {
+            -webkit-transform: rotate(-35deg);
+               -moz-transform: rotate(-35deg);
+                -ms-transform: rotate(-35deg);
+                 -o-transform: rotate(-35deg);
+                    transform: rotate(-35deg); }
+        100% {
+            -webkit-transform: rotate(0);
+               -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                 -o-transform: rotate(0);
+                    transform: rotate(0); }
+    }
+
+
+
+
+
+.dialog-none{display:none}
+.f22{font-size:.22rem}
